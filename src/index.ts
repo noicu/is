@@ -17,20 +17,4 @@ export const bF = is.isFalse
 
 export const sJ = is.isJsonTest
 
-export default {
-  ...is,
-  isA,
-  isB,
-  isD,
-  isE,
-  isF,
-  isN,
-  isO,
-  isR,
-  isS,
-  isNi,
-  bT,
-  bF,
-  sJ,
-};
 
