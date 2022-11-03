@@ -1,3 +1,5 @@
+import { IMG_FILE_TYPE } from "../common"
+
 export function isBoolean(value: any): value is boolean {
   return typeof value === 'boolean'
 }
@@ -60,4 +62,12 @@ export function isJsonTest(string: any): string is JSON {
     }
   }
   return false
+}
+
+export function isImg(type: string): boolean {
+  return !!IMG_FILE_TYPE[type]
+}
+
+export function isPDF(type: string): boolean {
+  return type === 'application/pdf'
 }
