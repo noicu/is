@@ -64,6 +64,10 @@ export function isJsonTest(string: any): string is JSON {
   return false
 }
 
+export function isNumberString (value: any): value is number {
+  return !isNaN(Number(value))
+}
+
 export function isImg(type: string): boolean {
   return !!IMG_FILE_TYPE[type]
 }
