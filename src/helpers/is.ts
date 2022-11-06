@@ -93,3 +93,8 @@ export function isChinaID(value: any) {
   return /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/.test(value)
 }
 
+export function isChinaZipCode(value: any) {
+  return /^[0-9]{6}$/.test(value)
+}
+
+
