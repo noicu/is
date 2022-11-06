@@ -64,8 +64,16 @@ export function isJsonTest(string: any): string is JSON {
   return false
 }
 
-export function isNumberString (value: any): value is number {
+export function isUndefined(value: any): value is undefined {
+  return value === undefined
+}
+
+export function isNumberString(value: any): value is number {
   return !isNaN(Number(value))
+}
+
+export function isNullString(value: any): value is string {
+  return value === ''
 }
 
 export function isImg(type: string): boolean {
