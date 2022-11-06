@@ -83,3 +83,8 @@ export function isImg(type: string): boolean {
 export function isPDF(type: string): boolean {
   return type === 'application/pdf'
 }
+
+
+export function isChinaMP(value: any) {
+  return /^0?1[3|4|5|6|7|8][0-9]\d{8}$/.test(value)
+}
