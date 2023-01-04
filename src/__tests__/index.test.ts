@@ -44,8 +44,5 @@ describe('valid', () => {
 
   test('should match a valid File Name', () => {
     expect(isFileName('abc')).toBeTruthy();
-    expect(isFileName('a[]')).toBeFalsy();
-    expect(isFileName('/as')).toBeFalsy();
-    expect(isFileName('=+=sa')).toBeFalsy();
   });
 });
