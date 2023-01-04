@@ -1,4 +1,4 @@
-import { isString, isNumber, isBoolean, isFunction, isArray,isDate,isObject ,isRegExp} from '../index';
+import { isString, isNumber, isBoolean, isFunction, isArray,isDate,isObject ,isRegExp, isFileName} from '../index';
 
 describe('valid', () => {
 
@@ -40,5 +40,12 @@ describe('valid', () => {
   test('should match a valid RegExp', () => {
     expect(isRegExp(/^[A-Fa-f0-9]+$/)).toBeTruthy();
     expect(isRegExp([])).toBeFalsy();
+  });
+
+  test('should match a valid File Name', () => {
+    expect(isFileName('abc')).toBeTruthy();
+    expect(isFileName('a[]')).toBeFalsy();
+    expect(isFileName('/as')).toBeFalsy();
+    expect(isFileName('=+=sa')).toBeFalsy();
   });
 });
